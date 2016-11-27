@@ -3,6 +3,15 @@
 # bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 
 def find_missing_letter(range)
+  letters = range.chars
+  first = letters[0]
+  last = letters[-1]
+  correct = (first..last).to_a
+  if letters == correct
+    return nil
+  else
+    return (correct - letters).join
+  end
 
 end
 
